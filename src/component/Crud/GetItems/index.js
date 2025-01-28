@@ -29,7 +29,7 @@ function BasicExample() {
     
       const fetchItems = async () => {
         try {
-          const response = await fetch('https://crudcrud.com/api/322f656fa8264ad19e2267a085580996/items');
+          const response = await fetch('https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items');
           const data = await response.json();
           setItems(data);
         } catch (error) {
@@ -58,7 +58,7 @@ function BasicExample() {
 const handleSubmit = async (e) => {
 
  try {
-  const response = await axios.put(`https://crudcrud.com/api/322f656fa8264ad19e2267a085580996/items/${id}`, 
+  const response = await axios.put(`https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items/${id}`, 
   par,
   );
   setShow(false)
@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
 
 const handleDeleteItem = async (itemId) => {
   try {
-    await axios.delete(`https://crudcrud.com/api/322f656fa8264ad19e2267a085580996/items/${itemId}`
+    await axios.delete(`https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items/${itemId}`
      );
      fetchItems()
   } catch (error) {
