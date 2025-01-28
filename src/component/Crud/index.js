@@ -11,7 +11,7 @@ const ItemCrud = () => {
 
   const fetchItems = async () => {
     try {
-      const response = await fetch('https://crudcrud.com/api/d2782f5462254fe9b69940ef31737a69/items');
+      const response = await fetch('https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items');
       const data = await response.json();
       setItems(data);
     } catch (error) {
@@ -41,7 +41,7 @@ console.log(items)
 
   const handleAddItem = async () => {
     try {
-      const response = await axios.post('https://crudcrud.com/api/d2782f5462254fe9b69940ef31737a69/items', {
+      const response = await axios.post('https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items', {
         name: newItemName,
       });
 
@@ -57,7 +57,7 @@ console.log(items)
 
   const handleUpdateItem = async (itemId, newName) => {
     try {
-      const response = await fetch(`https://crudcrud.com/api/d2782f5462254fe9b69940ef31737a69/items/${itemId}`, {
+      const response = await fetch(`https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items/${itemId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ console.log(items)
     debugger
     console.log(itemId)
     try {
-      const response = await axios.delete(`https://crudcrud.com/api/d2782f5462254fe9b69940ef31737a69/items/${itemId}`
+      const response = await axios.delete(`https://crudcrud.com/api/e64d8308e5704c72aefc9dfb04e316fd/items/${itemId}`
        );
       if (response.ok) {
         const updatedItems = items.filter((item) => item.id !== itemId);
